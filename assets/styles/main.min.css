@@ -1244,6 +1244,11 @@ html {
   bottom: 0px;
 }
 
+.inset-y-1\/2 {
+  top: 50%;
+  bottom: 50%;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -1415,6 +1420,10 @@ html {
 
 .h-auto {
   height: auto;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .max-h-screen {
@@ -1766,11 +1775,6 @@ html {
   padding-right: 2rem;
 }
 
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -1809,6 +1813,11 @@ html {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .pb-12 {
@@ -1895,6 +1904,10 @@ html {
   padding-top: 2rem;
 }
 
+.pt-4 {
+  padding-top: 1rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1955,10 +1968,6 @@ html {
 
 .uppercase {
   text-transform: uppercase;
-}
-
-.leading-4 {
-  line-height: 1rem;
 }
 
 .leading-8 {
@@ -2066,15 +2075,6 @@ html {
           filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.transition-all {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition-duration: 150ms;
-          transition-duration: 150ms;
-}
-
 .transition-opacity {
   -webkit-transition-property: opacity;
   transition-property: opacity;
@@ -2092,13 +2092,6 @@ html {
 .marker\:px-6::marker {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.hover\:scale-105:hover {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:bg-grey-20:hover {
@@ -2262,11 +2255,6 @@ html {
 }
 
 @media (min-width: 768px) {
-
-  .md\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
 
   .md\:-mt-1 {
     margin-top: -0.25rem;

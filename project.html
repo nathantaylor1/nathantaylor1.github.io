@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Device Info -->
+    <meta charset="utf-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <!-- Page Info -->
+    <title>Project Title | Nathan Taylor's Portfolio</title>
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="canonical" href="//pages/projects/project_title" />
+    <meta name="theme-color" content="#5540af" />
+    <!-- Open Graph Card -->
+    <meta property="og:title" content="Project Title | Nathan Taylor's Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="//pages/projects/project_title" />
+    <meta property="og:site_name" content="Nathan Taylor's Portfolio" />
+    <meta property="og:image" content="//assets/img/social.jpg" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tailwindmade" />
+    <!-- Fonts -->
+    <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap" rel="preload" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <!-- Stylesheet(s) -->
+    <link crossorigin="anonymous" href="/assets/styles/main.min.css" media="screen" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css" />
+    <!-- Scripts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script defer src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>hljs.highlightAll();</script>
+  </head>
+
+  <body :class="{ 'overflow-hidden max-h-screen': mobileMenu }" class="relative" x-data="{ mobileMenu: false }">
+    <div id="main" class="relative">
+      <div x-data="{
+        triggerNavItem(id) {
+          $scroll(id)
+        },
+        triggerMobileNavItem(id) {
+          mobileMenu = false;
+          this.triggerNavItem(id)
+        }
+      }"
+      >
+        <div class="w-full z-50 top-0 py-3 sm:py-5  bg-primary ">
+          <div class="container flex items-center justify-between">
+            <div>
+              <a href="/">
+                <!--<img src="/assets/img/logo.svg" class="w-24 lg:w-48" alt="logo image" />-->
+                <span class="cursor-pointer pt-1.5 font-header font-semibold uppercase text-white">Nathan Taylor</span>
+              </a>
+            </div>
+            <div class="hidden lg:block">
+              <ul class="flex items-center">
+                <!-- About Button -->
+                <li class="group pl-6">
+                  <a href="/#about" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">About</a>
+                  <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                </li>
+                <!-- Portfolio Button -->
+                <li class="group pl-6">
+                  <a href="/#portfolio" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Portfolio</a>
+                  <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                </li>
+                <!-- Work Button -->
+                <li class="group pl-6">
+                  <a href="/#work" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Work</a>
+                  <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                </li>
+                <!-- Blog Button
+                <li class="group pl-6">
+                  <a href="/#blog" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Blog</a>
+                  <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                </li> -->
+                <!-- Contact Button -->
+                <li class="group pl-6">
+                  <a href="/#contact" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Contact</a>
+                  <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                </li>
+              </ul>
+            </div>
+            <div class="block lg:hidden">
+              <button @click="mobileMenu = true">
+                <i class="bx bx-menu text-4xl text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden" :class="{ 'opacity-100 pointer-events-auto': mobileMenu }">
+          <div class="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3">
+            <button class="absolute top-0 right-0 mt-4 mr-4" @click="mobileMenu = false">
+              <img src="/assets/img/icon-close.svg" class="h-10 w-auto" alt />
+            </button>
+            <ul class="mt-8 flex flex-col">
+              <!-- About Button -->
+              <li class="py-2">
+                <a href="/#about" class="pt-0.5 font-header font-semibold uppercase text-white">About</a>
+              </li>
+              <!-- Portfolio Button -->
+              <li class="py-2">
+                <a href="/#portfolio" class="pt-0.5 font-header font-semibold uppercase text-white">Portfolio</a>
+              </li>
+              <!-- Work Button -->
+              <li class="py-2">
+                <a href="/#work" class="pt-0.5 font-header font-semibold uppercase text-white">Work</a>
+              </li>
+              <!-- Blog Button
+              <li class="py-2">
+                <a href="/#blog" class="pt-0.5 font-header font-semibold uppercase text-white">Blog</a>
+              </li> -->
+              <!-- Contact Button -->
+              <li class="py-2">
+                <a href="/#contact" class="pt-0.5 font-header font-semibold uppercase text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Article -->
+        <div>
+          <div class="container py-6 md:py-10">
+            <div class="mx-auto max-w-4xl">
+              <!-- Project Information -->
+              <div>
+                <!-- Project Title -->
+                <h1 class="pt-5 font-body text-3xl font-semibold text-primary sm:text-4xl md:text-5xl xl:text-6xl">
+                  Project Title
+                </h1>
+                <div class="flex items-center pt-5 md:pt-10">
+                  <div class="pl-5">
+                    <!-- Contributers -->
+                    <span class="block font-body text-xl font-bold text-grey-10">
+                      Nathan Taylor</span>
+                    <!-- Time Span -->
+                    <span class="block pt-1 font-body text-xl font-bold text-grey-30">
+                      Month DD, YYYY</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Image Carousel -->
+              <div class="pt-4 relative">
+                <img id="image" class="w-full h-full" src="/assets/img/portfolio-jungle-defense.webp" alt="">
+                <div class="arrows w-full absolute inset-y-1/2 flex justify-between px-3">
+                  <button id="prev"><i class="bx bx-chevron-left text-4xl text-white"></i></button>
+                  <button id="next"><i class="bx bx-chevron-right text-4xl text-white"></i></button>
+                </div>
+              </div>
+              <!-- Text Body -->
+              <div class="prose max-w-none pt-8">
+                <h2 id="lorem-ipsum-dolor-sit-amet">Lorem ipsum dolor sit amet</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem accusantium doloremque laudantium, totam rem
+                  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                  architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                  voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur magni dolores eos qui ratione voluptatem
+                  sequi nesciunt. Neque porro quisquam est. Ut enim ad minima
+                  veniam, quis nostrum exercitationem ullam corporis suscipit
+                  laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
+                  autem vel eum iure reprehenderit qui in ea voluptate velit
+                  esse quam nihil molestiae consequatur, vel illum qui dolorem
+                  eum fugiat quo voluptas nulla pariatur?
+                </p>
+
+                <h3 id="lorem-ipsum-dolor-sit-amet-1">Lorem ipsum dolor sit amet</h3>
+                <p>
+                  Possent quippe. Conata fera ab Hersilie iam auditur haesit.
+                  Culpa ignis retia Aonides ictus crescendo micantes, petere,
+                  ambustaque vicem in digitos iubet cornigeris.
+                </p>
+                <ul>
+                  <li>Iura demens satus vino simulac celanda</li>
+                  <li>Exhibuere frustra utque</li>
+                  <li>Iura demens satus vino simulac celanda</li>
+                  <li>Exhibuere frustra utque</li>
+                  <li>Panda pars umidus</li>
+                </ul>
+
+                <h4 id="lorem-ipsum-dolor-sit-amet-2">Lorem ipsum dolor sit amet</h4>
+                <p>
+                  Possent quippe. Conata fera ab Hersilie iam auditur haesit.
+                  Culpa ignis retia Aonides ictus crescendo micantes, petere,
+                  ambustaque vicem in digitos iubet cornigeris.
+                </p>
+                
+                <div class="language-plaintext highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight">
+                      <code>
+                        fonts.forEach(font =&gt; {
+                          const { id, name, likes } = font;
+                          if (
+                            likes &gt;= 30
+                            || (likes === 50 &amp;&amp; likes != 0)
+                            || favorites[id]
+                          ) {
+                            coolFonts++;
+                            console.log(`${name} is cool!`);
+                          }
+                        });
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem accusantium doloremque laudantium, totam rem
+                  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                  architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                  voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur magni dolores eos qui ratione voluptatem
+                  sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                  quia dolor sit amet, consectetur, adipisci velit.
+                </p>
+              </div>
+
+              <div class="flex pt-10">
+                <a href="/" class="rounded-xl bg-primary px-4 py-1 font-body font-bold text-white hover:bg-grey-20">Frontend</a>
+                <a href="/" class="ml-2 block rounded-xl bg-primary px-4 py-1 font-body font-bold text-white hover:bg-grey-20">Design</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-grey-50">
+          <div class="container flex flex-col justify-between py-6 sm:flex-row">
+            <p class="text-center font-body text-black md:text-left">
+              © Copyright 2022. All right reserved, ATOM.
+            </p>
+            <div class="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
+              <a href="https://www.linkedin.com/in/nathantaylor21/go" target="_blank" class="pl-4"><i class="bx bxl-linkedin text-2xl text-black hover:text-yellow"></i></a>
+              <a href="https://github.com/nathantaylor1" target="_blank" class="pl-4"><i class="bx bxl-github text-2xl text-black hover:text-yellow"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </body>
+    
+    <script>
+      const interval = 10; // seconds
+      const images = [
+        '/assets/img/portfolio-jungle-defense.webp',
+        '/assets/img/portfolio-hack-attack.webp',
+        '/assets/img/portfolio-blocky-battle-arena.webp',
+        '/assets/img/portfolio-metroid.webp'
+      ]
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      const image = document.getElementById('image');
+      var slide = 0;
+
+      function incrementSlide(amount = 1) {
+        slide += amount;
+        if (slide === images.length) {
+          slide = 0;
+        }
+        else if (slide < 0) {
+          slide = images.length - 1;
+        }
+        image.src = images[slide];
+      }
+      
+      let intervalID = setInterval(incrementSlide, interval*1000);
+
+      function resetInterval() {
+        clearInterval(intervalID);
+        intervalID = setInterval(incrementSlide, interval*1000);
+      }
+
+      next.addEventListener('click', () => {
+        resetInterval();
+        incrementSlide();
+      })
+
+      prev.addEventListener('click', () => {
+        resetInterval();
+        incrementSlide(-1);
+      })
+    </script>
+  </html>
