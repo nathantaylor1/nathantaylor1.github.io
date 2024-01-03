@@ -1,0 +1,57 @@
+{
+    "projects": [
+        {
+            "id": "1",
+            "name": "StretchVR",
+            "img": "/assets/img/portfolio-stretchvr.gif",
+            "keywords": "Virtual Reality &#183; Unreal Engine 5 &#183; C++"
+        },
+        {
+            "id": "2",
+            "name": "insta485",
+            "img": "/assets/img/portfolio-insta485.webp",
+            "keywords": "Flask &#183; React.JS &#183; REST APIs"
+        },
+        {
+            "id": "3",
+            "name": "A2 Go",
+            "img": "/assets/img/portfolio-a2go.webp",
+            "keywords": "Augmented Reality &#183; Unity Engine &#183; C#"
+        },
+        {
+            "id": "4",
+            "name": "CSE Simulator",
+            "type": "XR",
+            "img": "/assets/img/portfolio-cse.webp",
+            "keywords": "Virtual Reality &#183; Unreal Engine 5 &#183; C++"
+        },
+        {
+            "id": "5",
+            "name": "Jungle Defense",
+            "type": "Game",
+            "img": "/assets/img/portfolio-jungle-defense.webp",
+            "keywords": "Tower Defense &#183; Unity Engine &#183; C#"
+        },
+        {
+            "id": "6",
+            "name": "Hack Attack: Code Corruption",
+            "type": "Game",
+            "img": "/assets/img/portfolio-hack-attack.webp",
+            "keywords": "Educational Platformer &#183; Unity Engine &#183; C#"
+        },
+        {
+            "id": "7",
+            "name": "Blocky Battle Arena",
+            "type": "Game",
+            "img": "/assets/img/portfolio-blocky-battle-arena.webp",
+            "keywords": "Procedural Generation &#183; Unity Engine &#183; C#"
+        },
+        {
+            "id": "8",
+            "name": "Metroid",
+            "type": "Game",
+            "img": "/assets/img/portfolio-metroid.webp",
+            "keywords": "NES Recreation &#183; Unity Engine &#183; C#"
+        }
+    ]
+}
