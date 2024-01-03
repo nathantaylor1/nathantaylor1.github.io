@@ -241,7 +241,12 @@
             <!-- Portfolio Items -->
             <noscript><h3 class="w-full pt-12 text-center text-black font-semibold uppercase text-4xl">Please enable JavaScript to view portfolio.</h3></noscript>
             <div id="portfolio-items" class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2"></div>
-            <div id="portfolio-buttons" class="flex justify-center items-center"></div>
+            <div class="flex justify-center items-center">
+              <button onclick="DisplayMoreResults()" id="see-more" class="pt-8 text-center font-header text-2xl font-semibold uppercase text-primary">
+                More projects.
+                <i class="bx bx-chevron-down hidden text-primary md:block"></i>
+              </button>
+            </div>
           </div>
 
           <!-- Education Section -->
@@ -643,7 +648,50 @@
 
       </div>
 
-      <script src="/assets/js/main.js"></script>
+      <script>
+        function elementFromHTML(html) {
+          /* Turn PlainText HTML into an HTMLElement. */
+          const template = document.createElement("template");
+          template.innerHTML = html.trim();
+          return template.content.firstElementChild;
+        }
+
+        const results = [];
+        const seeMore = document.getElementById("see-more");
+
+        // Display Results
+        const div = document.getElementById("portfolio-items");
+        function DisplayMoreResults() {
+            var len = results.length
+            for (var i = 0; i < len && i < 4; i += 1) {
+                div.append(results.shift())
+            }
+            seeMore.style.display = results.length > 0 ? "relative" : "none";
+        }
+
+        seeMore.addEventListener("click", () => {
+          DisplayMoreResults();
+        })
+
+        // Gather Results
+        fetch("/assets/content/portfolio.json")
+        .then(response => response.json())
+        .then((data) => {
+            data.projects.map((project) => {
+                const project_html = elementFromHTML(
+                    `<!-- ${project.name} -->
+                    <a href="/" class="relative mx-auto transform transition-all hover:scale-105 md:mx-0">
+                        <img src="${project.img}" class="w-full shadow" alt="portfolio image" />
+                        <div class="absolute w-full h-auto shadow py-1 bottom-0 inset-x-0 bg-primary text-center leading-4">
+                            <span class="text-white text-2xl sm:text-lg">${project.name}</span><br>
+                            <span class="text-white text-lg sm:text-base">${project.keywords}</span>
+                        </div>
+                    </a>`);
+                results.push(project_html);
+            });
+            DisplayMoreResults();
+        })
+      </script>
 
     </body>
   </html>

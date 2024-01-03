@@ -1978,6 +1978,10 @@ html {
   line-height: 1.625;
 }
 
+.leading-4 {
+  line-height: 1rem;
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -2084,6 +2088,15 @@ html {
           transition-duration: 150ms;
 }
 
+.transition-all {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 150ms;
+          transition-duration: 150ms;
+}
+
 .marker\:px-6 *::marker {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -2092,6 +2105,13 @@ html {
 .marker\:px-6::marker {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:bg-grey-20:hover {
@@ -2249,12 +2269,27 @@ html {
     line-height: 1;
   }
 
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .sm\:leading-9 {
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 768px) {
+
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 
   .md\:-mt-1 {
     margin-top: -0.25rem;
