@@ -680,8 +680,8 @@
             data.projects.map((project) => {
                 const project_html = elementFromHTML(
                     `<!-- ${project.name} -->
-                    <a href="/" class="relative mx-auto transform transition-all hover:scale-105 md:mx-0">
-                        <img src="${project.img}" class="w-full shadow" alt="portfolio image" />
+                    <a href="${project.link}" class="relative mx-auto transform transition-all hover:scale-105 md:mx-0">
+                        <img src="${project.img}" class="w-full shadow" alt="${project.name} image" />
                         <div class="absolute w-full h-auto shadow py-1 bottom-0 inset-x-0 bg-primary text-center leading-4">
                             <span class="text-white text-2xl sm:text-lg">${project.name}</span><br>
                             <span class="text-white text-lg sm:text-base">${project.keywords}</span>

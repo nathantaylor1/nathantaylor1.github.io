@@ -128,22 +128,24 @@
               <div>
                 <!-- Project Title -->
                 <h1 class="pt-5 font-body text-3xl font-semibold text-primary sm:text-4xl md:text-5xl xl:text-6xl">
-                  Project Title
+                  StretchVR
                 </h1>
                 <div class="flex items-center pt-5 md:pt-10">
                   <div class="pl-5">
                     <!-- Contributers -->
                     <span class="block font-body text-xl font-bold text-grey-10">
-                      Nathan Taylor</span>
+                      Nathan Taylor, Tavo Duvall, Jason Xu, Alan Zhang, Rory Cai
+                    </span>
                     <!-- Time Span -->
                     <span class="block pt-1 font-body text-xl font-bold text-grey-30">
-                      Month DD, YYYY</span>
+                      Nov. 2023 - Dec. 2023
+                    </span>
                   </div>
                 </div>
               </div>
               <!-- Image Carousel -->
               <div class="pt-4 relative">
-                <img id="image" class="relative w-full h-full" src="/assets/img/portfolio-jungle-defense.webp" alt="">
+                <img id="image" class="relative w-full h-full" src="" alt="">
                 <div class="arrows w-full absolute inset-y-1/2 flex justify-between px-3">
                   <button id="prev"><i class="bx bx-chevron-left text-4xl text-white shadow bg-primary rounded-xl"></i></button>
                   <button id="next"><i class="bx bx-chevron-right text-4xl text-white shadow bg-primary rounded-xl"></i></button>
@@ -256,16 +258,15 @@
     
     <script>
       const interval = 10; // seconds
-      const images = [
-        '/assets/img/portfolio-jungle-defense.webp',
-        '/assets/img/portfolio-hack-attack.webp',
-        '/assets/img/portfolio-blocky-battle-arena.webp',
-        '/assets/img/portfolio-metroid.webp'
+      const images = [ // TODO
+        'https://res.cloudinary.com/dezvs4jqp/image/upload/v1705378177/Portfolio/stretchvr/stretchvr2.jpg'
       ]
       const prev = document.getElementById('prev');
       const next = document.getElementById('next');
       const image = document.getElementById('image');
       var slide = 0;
+
+      image.src = images[slide];
 
       function incrementSlide(amount = 1) {
         slide += amount;

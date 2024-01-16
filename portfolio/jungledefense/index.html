@@ -6,15 +6,15 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
     <!-- Page Info -->
-    <title>StretchVR | Nathan Taylor's Portfolio</title>
+    <title>Jungle Defense | Nathan Taylor's Portfolio</title>
     <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
     <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
-    <link rel="canonical" href="//projects/stretchvr" />
+    <link rel="canonical" href="//projects/jungledefense" />
     <meta name="theme-color" content="#5540af" />
     <!-- Open Graph Card -->
-    <meta property="og:title" content="StretchVR | Nathan Taylor's Portfolio" />
+    <meta property="og:title" content="Jungle Defense | Nathan Taylor's Portfolio" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:url" content="//projects/stretchvr" />
+    <meta property="og:url" content="//projects/jungledefense" />
     <meta property="og:site_name" content="Nathan Taylor's Portfolio" />
     <meta property="og:image" content="//assets/img/social.jpg" />
     <!-- Twitter Card -->
@@ -128,22 +128,24 @@
               <div>
                 <!-- Project Title -->
                 <h1 class="pt-5 font-body text-3xl font-semibold text-primary sm:text-4xl md:text-5xl xl:text-6xl">
-                  Project Title
+                  Jungle Defense
                 </h1>
                 <div class="flex items-center pt-5 md:pt-10">
                   <div class="pl-5">
                     <!-- Contributers -->
                     <span class="block font-body text-xl font-bold text-grey-10">
-                      Nathan Taylor</span>
+                      Nathan Taylor, Gene Hawkins, Taylor McAuslan
+                    </span>
                     <!-- Time Span -->
                     <span class="block pt-1 font-body text-xl font-bold text-grey-30">
-                      Month DD, YYYY</span>
+                      Sept. 2023
+                    </span>
                   </div>
                 </div>
               </div>
               <!-- Image Carousel -->
               <div class="pt-4 relative">
-                <img id="image" class="relative w-full h-full" src="/assets/img/portfolio-jungle-defense.webp" alt="">
+                <img id="image" class="relative w-full h-full" src="" alt="">
                 <div class="arrows w-full absolute inset-y-1/2 flex justify-between px-3">
                   <button id="prev"><i class="bx bx-chevron-left text-4xl text-white shadow bg-primary rounded-xl"></i></button>
                   <button id="next"><i class="bx bx-chevron-right text-4xl text-white shadow bg-primary rounded-xl"></i></button>
@@ -256,16 +258,19 @@
     
     <script>
       const interval = 10; // seconds
-      const images = [
-        '/assets/img/portfolio-jungle-defense.webp',
-        '/assets/img/portfolio-hack-attack.webp',
-        '/assets/img/portfolio-blocky-battle-arena.webp',
-        '/assets/img/portfolio-metroid.webp'
+      const images = [ // TODO
+        'https://res.cloudinary.com/dezvs4jqp/image/upload/v1705378170/Portfolio/jungle_defense/jungle-defense-splashscreen_kuzkpl.webp',
+        'https://res.cloudinary.com/dezvs4jqp/image/upload/v1705378144/Portfolio/jungle_defense/jungle-defense-cardshow_wvw3kq.webp',
+        'https://res.cloudinary.com/dezvs4jqp/image/upload/v1705378171/Portfolio/jungle_defense/jungle-defense-play-3_m44i2u.webp',
+        'https://res.cloudinary.com/dezvs4jqp/image/upload/v1705378170/Portfolio/jungle_defense/jungle-defense-play-2_tdmzrj.webp',
+        'https://res.cloudinary.com/dezvs4jqp/image/upload/v1705378169/Portfolio/jungle_defense/jungle-defense-play-1_liewth.webp'
       ]
       const prev = document.getElementById('prev');
       const next = document.getElementById('next');
       const image = document.getElementById('image');
       var slide = 0;
+
+      image.src = images[slide];
 
       function incrementSlide(amount = 1) {
         slide += amount;
